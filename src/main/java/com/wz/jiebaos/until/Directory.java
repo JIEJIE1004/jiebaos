@@ -11,6 +11,10 @@ import java.util.List;
 
 public class Directory {
 
+    public void test()
+    {
+        System.out.println("git测试");
+    }
 
     //获取到默认根目录
     public ArrayList<File> getRootDirectory(File file)
