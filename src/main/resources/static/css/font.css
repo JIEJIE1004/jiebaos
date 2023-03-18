@@ -1,0 +1,7 @@
+div{
+    font-family: test;
+}
+@font-face{
+    font-family: test;
+    src: url("../fonts/YuWeiShuFaYunMoFanTi-2.ttf");
+}

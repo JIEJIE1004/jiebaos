@@ -1,0 +1,102 @@
+<!doctype html>
+<html lang="en" xml:th="http:/www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>fileDown</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/css/public.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/stylem.css">
+    <link rel="stylesheet" href="../static/css/stylean.css">
+
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/app.js"></script>
+</head>
+
+<script type="text/javascript" th:inline="javascript">
+    var msg = [[${msg}]];
+    if(msg != null)
+        alert(msg);
+</script>
+
+<style>
+    body {
+        background-image: url('../static/img/weblist/3.jpg');
+        background-repeat: repeat-x;
+        font-family: 'Times New Roman', Times, serif;
+        font-size: 18px;
+    }
+    table {
+        width: 100px;
+        table-layout: fixed;
+        /* 只有定义了表格的布局算法为fixed，下面td的定义才能起作用。 */
+    }
+
+    tr {
+    }
+
+    td {
+        width: 100%;
+        word-break: keep-all;
+        /* 不换行 */
+        white-space: nowrap;
+        /* 不换行 */
+        overflow: hidden;
+        /* 内容超出宽度时隐藏超出部分的内容 */
+        text-overflow: ellipsis;
+        /* 当对象内文本溢出时显示省略标记(...) ；需与overflow:hidden;一起使用*/
+    }
+
+    .td{
+        width: 70px;
+    }
+    a{
+        text-decoration: none;
+    }
+</style>
+
+<body>
+<div class="col-md-4" style="margin-top: 10px; margin-left: 30px; background-color: white">
+    <div class="panel panel-default">
+        <!-- 文件地址-->
+        <div class="panel-heading" style="color: rgb(228,21,42); " th:text="${url}">
+        </div>
+        <!--文件目录-->
+        <table class="table  table-hover  table-condensed" style="color: #ff342f;">
+
+            <tr th:each="file:${urlDirectory}" style="line-height: 1px;">
+                <td class="td"  style="height: 5px">
+                    <input type="checkbox"style="height: 10px;margin-top: -10px">
+                </td>
+                <td style="color: #b5c53c; font-size: 15px;height: 5px; margin-top: 5px">
+                    <a th:href="@{/fileDown(url=${file.getPath()})}" th:text="${file.getName()}"></a>
+                </td>
+            </tr>
+
+            <tr>
+                <td class="td">
+                    <a href="/toFileUp" th:text="quit"></a>
+                </td>
+                <td style="text-align:right;">
+                    <a th:href="@{/returnOn(url=${url})}" th:text="返回上层目录"></a>
+                </td>
+            </tr>
+
+
+        </table>
+    </div>
+</div>
+
+
+</body>
+
+</html>

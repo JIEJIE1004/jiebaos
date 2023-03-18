@@ -1,0 +1,209 @@
+<!doctype html>
+<html lang="en"  xml:th="http:/www.thymeleaf.org" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Web</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="stylesheet" href="../static/css/bootstrap.css">
+    <link rel="stylesheet" href="../static/css/font-awesome.css">
+    <link rel="stylesheet" href="../static/css/public.css">
+    <link rel="stylesheet" href="../static/css/style.css">
+    <link rel="stylesheet" href="../static/css/stylem.css">
+    <link rel="stylesheet" href="../static/css/stylean.css">
+
+    <script src="../static/js/jquery-3.3.1.js"></script>
+    <script src="../static/js/popper.min.js"></script>
+    <script src="../static/js/bootstrap.min.js"></script>
+    <script src="../static/js/app.js"></script>
+</head>
+<style type="text/css">
+
+</style>
+<body>
+    <!-- 头部 -->
+    <div class="header ShowPC">
+        <nav class="head">
+            <!-- logo -->
+            <div class="header_logo_out">
+                <div class="header_logo">
+                    <img class="img-fluid header_logo_img" src="../static/img/head/log.jpg" alt="" style="height: 70px;">
+                </div>
+            </div>
+            <div class="header_link">
+                <ul>
+                    <li>
+                        <a href="/toChief">Chief</a>
+                    </li>
+                    <li>
+                        <a href="/toWeb">Web</a>
+                    </li>
+                    <li>
+                        <a href="/toLife">Life</a>
+                    </li>
+                    <li>
+                        <a href="/toCartoon">Cartoon</a>
+                    </li>
+                    <li>
+                        <a href="/toFileUp">FileUp</a>
+                    </li>
+                    <li>
+                        <a href="/logout">logout</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+    </div>
+    <!-- 手机头部 -->
+    <div class="header_mb ShowMB">
+        <div class="header_mb01">
+            <div class="header_mb01_btn ">
+                <i class="fa fa-align-justify"></i>
+            </div>
+            <div class="header_mb01_logo">
+                <a href="">
+                    <img src="../static/img/head/logomb.png" alt="">
+                </a>
+            </div>
+            <div class="header_mb01_search 	">
+                <i class="fa fa-search"></i>
+            </div>
+        </div>
+        <div class="header_mb02">
+
+        </div>
+        <div class="header_mb03">
+            <div class="header_mb03_header">
+                <div class="header_mb03_header_img">
+                    <img class="w-100" src="../static/img/head/logow.png" alt="">
+                </div>
+            </div>
+            <div class="header_mb03_inner">
+                <div class="header_mb03_li">
+                    <a href="/toChief">
+                        <i class="fa fa-home"></i> Chief
+                    </a>
+                </div>
+                <div class="header_mb03_li">
+                    <a href="/toWeb">
+                        <i class="fa fa-laptop"></i>  <a href="">Web</a>
+                    </a>
+                </div>
+                <div class="header_mb03_li">
+                    <a href="/toLife">
+                        <i class="fa fa-coffee"></i> <a href="">Life</a>
+                    </a>
+                </div>
+                <div class="header_mb03_li">
+                    <a href="/toCartoon">
+                        <i class="	fa fa-paint-brush"></i> <a href="">Cartoon</a>
+                    </a>
+                </div>
+                <div class="header_mb03_li">
+                    <a href="/toFileUp">
+                        <i class="	fa fa-paint-brush"></i> <a href="">FileUp</a>
+                    </a>
+                </div>
+                <div class="header_mb03_li">
+                    <a href="/logout">
+                        <i class="	fa fa-paint-brush"></i> <a href="">logout</a>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- 内容 -->
+    <div class="content content_web">
+        <div class="web_canvas">
+            <div class="web_canvas_01">
+                <div class="web_canvas_01_bg">
+
+                </div>
+
+            </div>
+            <div class="web_canvas_02">
+                <canvas id="canvas_web02"></canvas>
+            </div>
+        </div>
+
+        <!-- 1 -->
+        <div class=" web_content1">
+            <div class="container ">
+               
+            </div>
+        </div>
+        <!-- 2 -->
+        <div class=" web_content2" style="height: 400px;">
+            <div class="container ">
+                <div class="row">
+                    <div class="col-12 col-sm-6  col-md-4 col-lg-4 col-xl-3  ">
+                        <div class="web_con2_classify_title">
+                            html+css
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6  col-md-4 col-lg-4 col-xl-3  ">
+                        <div class="web_con2_classify_title">
+                            JavaScript
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6  col-md-4 col-lg-4 col-xl-3  ">
+                        <div class="web_con2_classify_title">
+                            canvas
+                        </div>
+                    </div>
+                    <div class="col-12 col-sm-6  col-md-4 col-lg-4 col-xl-3  ">
+                        <div class="web_con2_classify_title">
+                            工具/插件
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <script>
+            $(document).ready(function () {
+                $('[data-toggle="tooltip"]').tooltip();
+            });
+        </script>
+    </div> 
+    <div class="row" style="height: 600px;">
+        <img class="img-fluid" src="../static/img/home/1.jpg" alt="" style="width: 100%; height: 100%;">
+    </div>
+   <!-- 底部导航 -->
+   <div class="footer ShowPC">
+    <div class="container">
+        <div class="row">
+            <div class="col-12  footer_inner">
+                <div class="footer_inner_01">
+
+                    <div class="footer_inner_0102 footer_234">
+                        <a href="">
+                            <i class="fa fa-qq"></i>企鹅
+                        </a>
+                        <a href="">
+                            <i class="fa fa-wechat"></i>微信
+                        </a>
+                        <a href="">
+                            <i class="fa fa-facebook-square"></i>脸书
+                        </a>
+                        <a href="">
+                            <i class="fa fa-twitter"></i>推特
+                        </a>
+                        <a href="">
+                            <i class="fa fa-google"></i>谷歌
+                        </a>
+                    </div>
+                </div>
+                <div class="footer_inner_02"><a href="https://beian.miit.gov.cn/">备案号：鄂ICP备2023000238号-1</a></div>
+            </div>
+        </div>
+    </div>
+</div>
+    <!-- <script src="js/web_canvas01.js"></script> -->
+    <script src="../static/js/web_canvas02.js"></script>
+</body>
+
+
+</html>
