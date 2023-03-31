@@ -10,5 +10,6 @@ public class ShowPage {
         System.out.println("master test");
         System.out.println("hot-fix test");
         System.out.println("git-hub repositories test");
+        System.out.println("git-hub pull test");
     }
 }
